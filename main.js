@@ -26,6 +26,22 @@ function getTimeRemaining(endtime) {
   };
 }
 
+function getTimeRemaining(endtime) {
+  const total = Date.parse(endtime) - Date.parse(new Date());
+  const seconds = Math.floor((total / 1000) % 60);
+  const minutes = Math.floor((total / 1000 / 60) % 60);
+  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  
+  return {
+    total,
+    days,
+    hours,
+    minutes,
+    seconds
+  };
+}
+
 function initializeClock(id, endtime) {
   const clock = document.getElementById(id);
   const daysSpan = clock.querySelector('.days');
@@ -52,7 +68,6 @@ function initializeClock(id, endtime) {
 
 const deadline = new Date(Date.parse(new Date()) + 3 * 24 * 60 * 60 * 1000);
 initializeClock('clockdiv', deadline);
-
 $(window).on("resize", function () {
     var window = $(this);
 
