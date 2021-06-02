@@ -50,7 +50,7 @@ function initializeClock(id, endtime) {
   const timeinterval = setInterval(updateClock, 1000);
 }
 
-const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+const deadline = new Date(Date.parse(new Date()) + 3 * 24 * 60 * 60 * 1000);
 initializeClock('clockdiv', deadline);
 
 $(window).on("resize", function () {
