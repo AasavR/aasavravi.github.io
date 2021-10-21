@@ -71,110 +71,6 @@
 		<ul> Yes </ul>
 		<ul> No </ul>
         
-		<script type="text/javascript">
-			
-    $(function() {
-		var PARSE_APP_ID = "TWvkNXvWKe6GixlxZ44tv8pwacMJMwleMuG2oIT2";
-		var PARSE_REST_API_KEY = "vIaiOnNJTeV4ZnqSHrocG4jlCP00iJd24NywZkM9";
-		
-		loadQuestions();
-
-		function loadQuestions() {
-			jQuery.ajax({
-				method: "GET",
-				headers: {
-					"X-Parse-Application-Id": PARSE_APP_ID,
-					"X-Parse-REST-API-Key": PARSE_REST_API_KEY 
-				},
-				url: "https://api.parse.com/1/classes/Question?order=-questionText",
-				success: questionsLoaded,
-				error: ajaxError
-			});
-		}
-		
-		function questionsLoaded(data) {
-			for (var q in data.results) {
-				var question = data.results[q];
-				var questionItem = $('<li>');
-				var questionLink = $("<a href='#'>").text(question.questionText);
-				$(questionLink).data('question', question);
-				questionLink.appendTo(questionItem);
-				$(questionLink).click(questionClicked);
-				questionItem.appendTo($("#questions"));
-			}
-		}
-		
-		function questionClicked() {
-			var question = $(this).data('question');
-			$("#answers").hide();
-			$("#answers h2").text(question.questionText);
-			var questionId = question.objectId;
-			$.ajax({
-				method: "GET",
-				headers: {
-					"X-Parse-Application-Id": PARSE_APP_ID,
-					"X-Parse-REST-API-Key": PARSE_REST_API_KEY 
-				},
-				url: 'https://api.parse.com/1/classes/Answer?where={"question":{"__type":"Pointer","className":"Question","objectId":"' + questionId + '"}}',
-				success: answersLoaded,
-				error: ajaxError
-			});
-		}
-		
-		function answersLoaded(data) {
-			$("#answers ul").html('');
-			for (var a in data.results) {
-				var answer = data.results[a];
-				var answerItem = $('<li>');
-				answerItem.text(answer.answerText + 
-					' (' + answer.votes + ') ');
-				var button = $("<a href='#'>[Vote]</а>");
-				button.data('answer', answer);
-				button.click(voteButtonClicked);
-				button.appendTo(answerItem);
-				answerItem.appendTo($("#answers ul"));
-			}
-			$('#answers').show();
-		}
-		
-		function voteButtonClicked() {
-			var answer = $(this).data('answer');
-			$.ajax({
-				method: "PUT",
-				headers: {
-					"X-Parse-Application-Id": PARSE_APP_ID,
-					"X-Parse-REST-API-Key": PARSE_REST_API_KEY 
-				},
-				url: 'https://api.parse.com/1/classes/Answer/' + 
-					answer.objectId,
-				data: JSON.stringify(
-					{"votes": answer.votes + 1}
-				),
-				contentType: "application/json",
-				success: votedSuccessfully,
-				error: ajaxError
-			});
-		}
-		
-		function votedSuccessfully() {
-			noty({
-				text: 'Thanks for voting', 
-				layout: 'topCenter',
-				timeout: 2000}
-			);
-			
-		}
-		
-		function ajaxError() {
-			noty({
-				text: 'Cannot load AJAX data.', 
-				type: 'error',
-				layout: 'topCenter',
-				timeout: 5000}
-			);
-		}
-	});
-  </script>
 	</div>
 		
 		<div class="container">
@@ -198,8 +94,42 @@
 					<button type="submit" class="full">Subscribe</button>
 				</div>
 			</form>
+			<script> window.addEventListener( "load", function () {
+  function sendData() {
+    const XHR = new XMLHttpRequest();
+
+    // Bind the FormData object and the form element
+    const FD = new FormData( form );
+
+    // Define what happens on successful data submission
+    XHR.addEventListener( "load", function(event) {
+      alert( event.target.responseText );
+    } );
+
+    // Define what happens in case of error
+    XHR.addEventListener( "error", function( event ) {
+      alert( 'Oops! Something went wrong.' );
+    } );
+
+    // Set up our request
+    XHR.open( "POST", "https://example.com/cors.php" );
+
+    // The data sent is what the user provided in the form
+    XHR.send( FD );
+  }
+
+  // Access the form element...
+  const form = document.getElementById( "myForm" );
+
+  // ...and take over its submit event.
+  form.addEventListener( "submit", function ( event ) {
+    event.preventDefault();
+
+    sendData();
+  } );
+} );
+			</script>
 		</div>
-		<script src="js/app.js"></script>
    
  
 </body>
