@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,231 +66,110 @@
 		<ul> Yes </ul>
 		<ul> No </ul>
         
-    <section class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <h3>Airdropping starts in:</h3>
-                   <div id="clockdiv">
-  <div>
-    <span class="days"></span>
-    <div class="smalltext">Days</div>
-  </div>
-  <div>
-    <span class="hours"></span>
-    <div class="smalltext">Hours</div>
-  </div>
-  <div>
-    <span class="minutes"></span>
-    <div class="smalltext">Minutes</div>
-  </div>
-  <div>
-    <span class="seconds"></span>
-    <div class="smalltext">Seconds</div>
-  </div>
-</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <br><h1> This project is headway to a staking and a yield farm, called LASAVO, hence is being revisioned at the moment due to progress in the field of Distributed Ledger Technology and is now runway for the project <a href= ”http://www.lasavo.org/” > L A S A V O </a>  which use ASAV Token.<br></h1>
-                    <h1>ASAV Coin is an Ethereum based Crypto currency. ASAV Coin enables the possessor to hold stake in <b>ASAV AI</b> company. <br> <b> ASAV AI is a cutting edge firm in the field of machine learning, deep learning, artificial intelligence using NEAT algorithms </b> <br> In December of 2021, we are solving the self driving vehicles problem for all types whether it be a gas, petrol, diesel or a CNG. We will supply a phone like kit to the owner of the cars which will give them ability to self drive in INR 60000 (~ $828). We proceed to work on Sentient robots after that. Come join us in the future.</h1>
-                    <p id="subMail">Subscribe and get the lastest information</p>
-                    <input class="input" type="email" placeholder="Enter your email">
-                    <button type="submit" id="changeButton">Subscribe</button>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12" id="modalBack">
-                    <img class="videoModal" src="http://templates4share.com/uploads/posts/2011-10/1318010710_kelc2v7sujkqli0.jpeg" />
-                    <!-- Modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal" id="buttonOnTop">
-                        <span class="glyphicon glyphicon-play-circle" id="blueCircle" aria-hidden="true"></span>
-                    </button>
+		<script type="text/javascript">
+    $(function() {
+		var PARSE_APP_ID = "TWvkNXvWKe6GixlxZ44tv8pwacMJMwleMuG2oIT2";
+		var PARSE_REST_API_KEY = "vIaiOnNJTeV4ZnqSHrocG4jlCP00iJd24NywZkM9";
+		
+		loadQuestions();
 
-                    <div class="modal fade" id="videoModal">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h3>ASAV AI Token Airdrop</h3>
-                                </div>
-                                <div class="modal-body">
-                                    <iframe id="sizeFrame" width="560" height="315" src="https://youtube.com/embed/urvywfOM4Ko" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end of Modal -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <h3 class="socialHeader">Our Social Media</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <ul class="socialMedia">
-                        <li class="mediaPic"><img src="assets/socialicons/Twitter@1x.svg"></li>
-                        <li class="mediaPic"><img src="assets/socialicons/Facebook@1x.svg" ></li>
-                        <li class="mediaPic"><img src="assets/socialicons/Medium@1x.svg" ></li>
-                        <li class="mediaPic"><img src="assets/socialicons/Github@1x.svg" ></li>
-                        <li class="mediaPic"><img src="assets/socialicons/Telegram@1x.svg" ></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>TEAM</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12 rwdcolumn">
-                    <img class="img-portrait" src="photos/EdgarMorrison.jpg" />
-                    <h3 class="name">Shrikant Sharma</h3>
-                    <h6>CEO</h6>
-                    <p class="desc">Graduate of IIFT, running Spaceably, innovating MASAVI, first Civil/RealEstate-Crypto firm in India, supporter of ASAV</p>
-                    <img class="profileIcon" src="assets/profil/Facebook@1x.svg" />
-                    <img class="profileIcon" src="assets/profil/linkedin@1x.svg" />
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 rwdcolumn">
-                    <img class="img-portrait" src="photos/CristineGaspari.jpg" />
-                    <h3 class="name">Aasav Ravi</h3>
-                    <h6>Director</h6>
-                    <p class="desc">Spearheading, influential CR, LASAVO,</p>
-                    <img class="profileIcon" src="assets/profil/Facebook@1x.svg" />
-                    <img class="profileIcon" src="assets/profil/linkedin@1x.svg" />
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 rwdcolumn">
-                    <img class="img-portrait" src="photos/DavidBrand.jpg" />
-                    <h3 class="name">Tezz Prakash</h3>
-                    <h6>CFO</h6>
-                    <p class="desc">Marketing Head of ASAV. Innovating ASAV AI. Point of Contact for Sales. Overseeing marketing.</p>
-                    <img class="profileIcon" src="assets/profil/Facebook@1x.svg" />
-                    <img class="profileIcon" src="assets/profil/linkedin@1x.svg" />
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12 rwdcolumn">
-                    <img class="img-portrait" src="photos/AlanLee.jpg" />
-                    <h3 class="name">Mayank Katare</h3>
-                    <h6>COO</h6>
-                    <p class="desc"> Contact for LASAVO. overseeing guidance on administration.</p>
-                    <img class="profileIcon" src="assets/profil/Facebook@1x.svg" />
-                    <img class="profileIcon" src="assets/profil/linkedin@1x.svg" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="teamSlider">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-
-                    <div id="mySlider" class="carousel slide" data-ride="carousel">
-
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#mySlider" data-slide-to="0" class="active"></li>
-                            <li data-target="#mySlider" data-slide-to="1"></li>
-                            <li data-target="#mySlider" data-slide-to="2"></li>
-                            <li data-target="#mySlider" data-slide-to="3"></li>
-                        </ol>
-
-                        <!-- Wrapper for slides-->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img class="img-portrait" src="photos/EdgarMorrison.jpg" />
-                                <h3 class="name">Shrikant Sharma</h3>
-                                <h6>CEO</h6>
-                                <p class="desc">Graduate of IIFT, running Spaceably, innovating MASAVI, first Civil/RealEstate-Crypto firm in India, supporter of LASAVO</p>
-                                <img class="profileIcon" src="assets/profil/Facebook@1x.svg" />
-                                <img class="profileIcon" src="assets/profil/linkedin@1x.svg" />
-                            </div>
-                            <div class="item">
-                                <img class="img-portrait" src="photos/CristineGaspari.jpg" />
-                                <h3 class="name">Aasav Ravi</h3>
-                                <h6>CTO</h6>
-                                <p class="desc">Spearheading , influential , ASAV AI Tokens</p>
-                                <img class="profileIcon" src="assets/profil/Facebook@1x.svg" />
-                                <img class="profileIcon" src="assets/profil/linkedin@1x.svg" />
-                            </div>
-                            <div class="item">
-                                <img class="img-portrait" src="photos/DavidBrand.jpg" />
-                                <h3 class="name">Tezz Prakash</h3>
-                                <h6>CFO</h6>
-                                <p class="desc">Marketing Head of LASAVO. Innovating ASAV AI. Point of Contact for Sales. Overseeing marketing.</p>
-                                <img class="profileIcon" src="assets/profil/Facebook@1x.svg" />
-                                <img class="profileIcon" src="assets/profil/linkedin@1x.svg" />
-                            </div>
-                            <div class="item">
-                                <img class="img-portrait" src="photos/AlanLee.jpg" />
-                                <h3 class="name">Mayank Katare</h3>
-                                <h6>COO</h6>
-                                <p class="desc">Contact for LASAVO. overseeing guidance on administration.</p>
-                                <img class="profileIcon" src="assets/profil/Facebook@1x.svg" />
-                                <img class="profileIcon" src="assets/profil/linkedin@1x.svg" />
-                            </div>
-                        </div>
-
-                        <!-- Controls - left and right-->
-                        <!--<a class="left carousel-control" href="#mySlider" role="button" data-slide="prev">-->
-                            <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-                            <!--<span class="sr-only">Previous</span>-->
-                        <!--</a>-->
-                        <!--<a class="right carousel-control" href="#mySlider" role="button" data-slide="next">-->
-                            <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                            <!--<span class="sr-only">Next</span>-->
-                        <!--</a>-->
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <img src="assets/logo/Light.svg">
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <button type="submit">Read Whitepaper</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12" id="cent">
-                    <p>Contact us:</p>
-                    <p id="email">aasavravi@gmail.com</p>
-                    <p>LASAVO is a company with vision. With latest investments on Software, Machine learning, and Datasets.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <ul class="footerList">
-                        <li id="firstLi"><a>&copy; Copywriters 2017</a></li>
-                        <li id="secondLi"><a>FAQ</a></li>
-                        <li><a>Terms of Use</a></li>
-                        <li><a>Privacy</a></li>
-                    </ul>
-                    <p id="additional">&copy; Copywriters 2020</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="main.js" type="text/javascript"></script>
+		function loadQuestions() {
+			jQuery.ajax({
+				method: "GET",
+				headers: {
+					"X-Parse-Application-Id": PARSE_APP_ID,
+					"X-Parse-REST-API-Key": PARSE_REST_API_KEY 
+				},
+				url: "https://api.parse.com/1/classes/Question?order=-questionText",
+				success: questionsLoaded,
+				error: ajaxError
+			});
+		}
+		
+		function questionsLoaded(data) {
+			for (var q in data.results) {
+				var question = data.results[q];
+				var questionItem = $('<li>');
+				var questionLink = $("<a href='#'>").text(question.questionText);
+				$(questionLink).data('question', question);
+				questionLink.appendTo(questionItem);
+				$(questionLink).click(questionClicked);
+				questionItem.appendTo($("#questions"));
+			}
+		}
+		
+		function questionClicked() {
+			var question = $(this).data('question');
+			$("#answers").hide();
+			$("#answers h2").text(question.questionText);
+			var questionId = question.objectId;
+			$.ajax({
+				method: "GET",
+				headers: {
+					"X-Parse-Application-Id": PARSE_APP_ID,
+					"X-Parse-REST-API-Key": PARSE_REST_API_KEY 
+				},
+				url: 'https://api.parse.com/1/classes/Answer?where={"question":{"__type":"Pointer","className":"Question","objectId":"' + questionId + '"}}',
+				success: answersLoaded,
+				error: ajaxError
+			});
+		}
+		
+		function answersLoaded(data) {
+			$("#answers ul").html('');
+			for (var a in data.results) {
+				var answer = data.results[a];
+				var answerItem = $('<li>');
+				answerItem.text(answer.answerText + 
+					' (' + answer.votes + ') ');
+				var button = $("<a href='#'>[Vote]</а>");
+				button.data('answer', answer);
+				button.click(voteButtonClicked);
+				button.appendTo(answerItem);
+				answerItem.appendTo($("#answers ul"));
+			}
+			$('#answers').show();
+		}
+		
+		function voteButtonClicked() {
+			var answer = $(this).data('answer');
+			$.ajax({
+				method: "PUT",
+				headers: {
+					"X-Parse-Application-Id": PARSE_APP_ID,
+					"X-Parse-REST-API-Key": PARSE_REST_API_KEY 
+				},
+				url: 'https://api.parse.com/1/classes/Answer/' + 
+					answer.objectId,
+				data: JSON.stringify(
+					{"votes": answer.votes + 1}
+				),
+				contentType: "application/json",
+				success: votedSuccessfully,
+				error: ajaxError
+			});
+		}
+		
+		function votedSuccessfully() {
+			noty({
+				text: 'Thanks for voting', 
+				layout: 'topCenter',
+				timeout: 2000}
+			);
+			
+		}
+		
+		function ajaxError() {
+			noty({
+				text: 'Cannot load AJAX data.', 
+				type: 'error',
+				layout: 'topCenter',
+				timeout: 5000}
+			);
+		}
+	});
+  </script>
+   
+ 
 </body>
 </html>
