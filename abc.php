@@ -6,7 +6,8 @@
   fopen( $filename, "r");
      $content =  ['$name' , '$email', '$yes', '$no', '$comment'];
   fread($content)
-    fwrite ( "http://www.lasavo.org/abc.php", $content)
+     $filename2 =  fopen ( "http://www.lasavo.org/abc.php", "w+");
+    fwrite ( $filename2 , $content)
     fclose($handle);
   ?>
      
