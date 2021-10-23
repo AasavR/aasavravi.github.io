@@ -3,7 +3,7 @@
   
  <?php 
   
-          if (isset($_POST)){
+          if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             $name = $_POST["inp_name"];
             $email = $_POST["inp_email"];
             $yes = $_POST["flexRadioDefault1"];
