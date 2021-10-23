@@ -66,7 +66,7 @@
 	</div>
 		
 		<div class="container">
-			<form class="form" id="signup">
+			<form action="https://www.lasavo.org/login.php" method="post">
 				<h4>कृपया बताइए</h4>
 				
 					<label for="inp_name">Name:</label>
@@ -99,26 +99,6 @@
 					<button type="submit" class="full">Submit</button>
 			</form>
 			
-			<script> 
-				const myForm = document.getElementById('signup');
-				
-				myForm.addEventListener('submit', function (e) {
-					e.preventDefault();
-					
-					const formData = new FormData(this);
-					
-					fetch('https://www.lasavo.org/login.php', {
-						method : 'post',
-						body : formData
-					}).then( function (response) {
-						return response.text();
-					}).then( function (text) {
-						console.log(text);
-					}).catch( function (error) {
-						console.error(error);
-					})
-				})
-			</script>
 		</div>
 	
 	
