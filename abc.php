@@ -4,7 +4,7 @@
   <?php
   $filename = "http://www.lasavo.org/login.php";
   fopen( $filename, "r");
-     $content =  name , email, yes, no;
+     $content =  ['$name' , '$email', '$yes', '$no', '$comment'];
   fread($content)
     fwrite ( "http://www.lasavo.org/abc.php", $content)
     fclose($handle);
