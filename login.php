@@ -10,7 +10,7 @@
             $no = $_POST["flexRadioDefault2"];
             $comment= $_POST["inp_comments"];
            
-            echo 'Thank You for your time'
+            echo 'Thank You for your time';
             }
   ?>
 </body>
