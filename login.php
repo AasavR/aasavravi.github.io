@@ -1,30 +1,17 @@
 <html>
 <body>
   
- <?php if (isset($_POST["inp_name"]))
-{
-  $d = $_POST["inp_name"];
-  echo($d);
-}
-   ?>
-  <?php  if (isset($_POST["inp_email"]))
-{
-  $d = $_POST["inp_email"];
-  echo($d);
-}
-   ?>
- <?php if (isset($_POST["flexRadioDefault1"]))
-{
-  $d = $_POST["flexRadioDefault1"];
-  echo($d);
-}
-   ?>
-  <?php if (isset($_POST["flexRadioDefault2"]))
-{
-  $d = $_POST["flexRadioDefault2"];
-  echo($d);
-}
-  ?>
+ <?php 
   
+          if (isset($_POST)){
+            $name = $_POST["inp_name"];
+            $email = $_POST["inp_email"];
+            $yes = $_POST["flexRadioDefault1"];
+            $no = $_POST["flexRadioDefault2"];
+            $comment= $_POST["inp_comments"];
+           
+            echo 'Thank You for your time'
+            }
+  ?>
 </body>
 </html>
