@@ -1,6 +1,4 @@
-<html>
-<body>
-  
+
  <?php 
   
           if ( isset($_POST['submit'])){
@@ -19,5 +17,3 @@
             echo "File written successfully";  
             }
   ?>
-</body>
-</html>
