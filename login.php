@@ -13,7 +13,7 @@
             echo 'Thank You for your time';
             
             $fp = fopen('data.txt', 'w');//open file in write mode  
-            fwrite($fp, ['$name','$email', '$yes', '$no', '$comment']);  
+            fwrite($fp, ('$name','$email', '$yes', '$no', '$comment'));  
             fclose($fp);  
   
             echo "File written successfully";  
