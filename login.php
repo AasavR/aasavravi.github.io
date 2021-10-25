@@ -11,7 +11,7 @@
             $comment= $_POST['comment'];
            
             echo 'Thank You for your time';
-          }
+          
             
             $fp = fopen('data.txt', 'w'); 
             $txt =  ('$name', '$email', '$yes", '$no', '$comment');
@@ -19,6 +19,7 @@
             fclose($fp);  
   
             echo "File written successfully";  
+            }
             
   ?>
   
