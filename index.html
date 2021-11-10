@@ -9,15 +9,8 @@
 </head>
 <body>
 
-  
-            <div id="navbar" img src="https://www.linkpicture.com/q/asav-ai-3@300x-100-3.jpg" type="image" class="navbar-brand">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class=""><a href="#">Home</a></li>
-                    <li class=""><a href="#">Team</a></li>
-                    <li class=""><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+ 
+            <nav id="navbar" img src="https://www.linkpicture.com/q/asav-ai-3@300x-100-3.jpg" type="image" class="navbar-brand">
     </nav>
 
     <section class="main">
@@ -202,7 +195,46 @@
                     <img src="assets/logo/Light.svg">
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <button type="submit" name="whitepaper">Read Whitepaper</button>
+<button id="myBtn" name="whitepaper" type="submit">Read Whitepaper</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Diwali Token is an offering by Lasavo, as an ode to the festivals of the Asian subcontinent. These Diwali Tokens are celebratory in nature and are an offering to the holy gods of the Indian Subcontinent. These Diwali Tokens can be used to earn money in 2 ways, one our marketing campaign which distributes BNB on hodling of these tokens, secondly on appreciation of the price of the tokens. Our tokens are linked to the festivals and hence grow with the festivals.</p>
+  </div>
+    
+    <script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    </script>
+</div>
+                    
                 </div>
             </div>
             <div class="row">
